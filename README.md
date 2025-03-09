@@ -42,4 +42,12 @@ mvn clean install
 ````
 ```bash
 mvn exec:java -Dexec.mainClass="com.ecosio.linkcollector.App"
+````
 
+## Next Steps & Improvements
+
+- **Request Rate Limiting and Client Limitation:**  
+  The current HTTP client can become a bottleneck when too many requests are opened concurrently. Additionally, some websites may block your requests for security reasons if too many are sent in a short time period. Implementing rate limiting or throttling can help mitigate these issues.
+
+- **Enhanced URL Filtering:**  
+  The current URL filtering works for common URL patterns. However, it may miss or misinterpret less common URL formats. Refining the regex or using a dedicated URL parsing library could improve accuracy and coverage.
